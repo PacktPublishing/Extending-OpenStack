@@ -1,41 +1,38 @@
 # Extending OpenStack
 This is the code repository for [Learning AWS IoT](https://www.packtpub.com/virtualization-and-cloud/learning-aws-iot?utm_source=github&utm_medium=repository&utm_content=9781788396110), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
-The Internet of Things market increased a lot in the past few years and IoT development and its adoption have showed an upward trend. Analysis and predictions say that Enterprise IoT platforms are the future of IoT. AWS IoT is currently leading the market with its wide range of device support SDKs and versatile management console.
+OpenStack is a very popular cloud computing platform that has enabled several organizations to successfully implement their Infrastructure as a Service (IaaS) platforms in the last few years. This book will guide you through new features of the latest OpenStack releases and how to bring them into production straight away in an agile way. It starts by showing you how to expand your current OpenStack setup and approach your next OpenStack Data Center generation deployment. You will discover how to extend your storage and network capacity, and also take advantage of containerization technology, such as Docker and Kubernetes in OpenStack. In addition, it is an opportunity to explore the power of big data as a service implemented in OpenStack by integrating the Sahara project. 
 
-This book initially introduces you to the IoT platforms, and how it makes our IoT development easy. It then covers the complete AWS IoT Suite and how it can be used to develop secure communication between internet-connected things such as sensors, actuators, embedded devices, smart applications, and so on. The book also covers the various modules of AWS: AWS Greengrass, AWS device SDKs, AWS IoT Platform, AWS Button, AWS Management consoles, AWS-related CLI, and API references, all with practical use cases.
+This book will teach you how to build Hadoop clusters and launch jobs in a very simple way. Then, it will dedicate time to automating and deploying applications on top of OpenStack. You will discover how to create and publish your own application in simple steps using the novel application catalog service in OpenStack code named Murano. The final part of the book will shed the light on the identity service and will go through a consolidated authentication setup using Keystone. The book will be enclosed by leveraging the right tool to conduct and extend benchmarking performances tests against an operating OpenStack environment using the Rally platform. 
 
-Near the end, the book supplies security-related best practices to make bi-directional communication more secure. When you've finished this book, you'll be up-and-running with the AWS IoT Suite, and building IoT projects.
+By the end of this book, you will be ready to enter the next phase of OpenStack success by extending and customizing your private cloud based on your requirements.
 ## Instructions and Navigation
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
 The code will look like the following:
 ```
-var awsConfiguration = {
- poolId: '<cognito-pool-id>', // 'YourCognitoIdentityPoolId'
- host: '<aws-iot-host>.iot.<region>.amazonaws.com', // 'YourAwsIoTEndpoint',
- region: '<region>' // 'YourAwsRegion', e.g. 'us-east-1'
-};
+# Compute Hosts 
+    compute_hosts:
+    ... 
+      compute-02: 
+        ip: 172.16.0.105
 ```
 ## Hardware and Software Requirements
 
-The hardware requirements for this book include the following:
+The OpenStack installation will require the following hardware specifications:
+•	A host machine with CPU hardware virtualization support
+•	8 CPU cores
+•	16 GB RAM
+•	60 GB free disk space
 
-* Raspberry Pi 3
-* Arduino Yún
-* AWS IoT Button
-* SimpleLink™ Wi-Fi® CC3220SF Wireless LaunchPad
-* DHT22 Sensor
-* LEDs
-* Breadboard
-* Jumper cables
+The lab environment uses the following software and tools:
+•	Operating system: CentOS 7 or Ubuntu 14.04
+•	OpenStack: Mitaka and later releases
+•	VirtualBox 5.0 or newer
+•	Vagrant 2.0.1 or newer
+•	Ansible server 2.4 or newer
+•	Python 2.7
 
-The software requirements are as follows:
-
-* AWS License
-* Arduino Software
-* Python and its libraries
-* Node.js
 
 ## Related Products
 * [Azure IoT Development Cookbook](https://www.packtpub.com/virtualization-and-cloud/azure-iot-development-cookbook?utm_source=github&utm_medium=repository&utm_content=9781787283008)
