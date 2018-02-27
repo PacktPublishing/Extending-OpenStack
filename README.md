@@ -1,5 +1,5 @@
 # Extending OpenStack
-This is the code repository for [Learning AWS IoT](https://www.packtpub.com/virtualization-and-cloud/learning-aws-iot?utm_source=github&utm_medium=repository&utm_content=9781788396110), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Extending OpenStack](https://www.packtpub.com/virtualization-and-cloud/extending-openstack?utm_source=github&utm_medium=repository&utm_content=9781788396110), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 OpenStack is a very popular cloud computing platform that has enabled several organizations to successfully implement their Infrastructure as a Service (IaaS) platforms in the last few years. This book will guide you through new features of the latest OpenStack releases and how to bring them into production straight away in an agile way. It starts by showing you how to expand your current OpenStack setup and approach your next OpenStack Data Center generation deployment. You will discover how to extend your storage and network capacity, and also take advantage of containerization technology, such as Docker and Kubernetes in OpenStack. In addition, it is an opportunity to explore the power of big data as a service implemented in OpenStack by integrating the Sahara project. 
 
@@ -11,32 +11,30 @@ All of the code is organized into folders. Each folder starts with a number foll
 
 The code will look like the following:
 ```
-# Compute Hosts 
-    compute_hosts:
-    ... 
-      compute-02: 
-        ip: 172.16.0.105
+[neutron.ml2.mechanism_drivers] 
+... 
+pp_ext_driver = neutron.plugins.ml2.drivers.ext_pp:MyExtDriver
 ```
 ## Hardware and Software Requirements
 
 The OpenStack installation will require the following hardware specifications:
-•	A host machine with CPU hardware virtualization support
-•	8 CPU cores
-•	16 GB RAM
-•	60 GB free disk space
+* A host machine with CPU hardware virtualization support
+* 8 CPU cores
+* 16 GB RAM
+* 60 GB free disk space
 
 The lab environment uses the following software and tools:
-•	Operating system: CentOS 7 or Ubuntu 14.04
-•	OpenStack: Mitaka and later releases
-•	VirtualBox 5.0 or newer
-•	Vagrant 2.0.1 or newer
-•	Ansible server 2.4 or newer
-•	Python 2.7
+* Operating system: CentOS 7 or Ubuntu 14.04
+* OpenStack: Mitaka and later releases
+* VirtualBox 5.0 or newer
+* Vagrant 2.0.1 or newer
+* Ansible server 2.4 or newer
+* Python 2.7
 
 
 ## Related Products
-* [Azure IoT Development Cookbook](https://www.packtpub.com/virtualization-and-cloud/azure-iot-development-cookbook?utm_source=github&utm_medium=repository&utm_content=9781787283008)
+* [OpenStack Bootcamp](https://www.packtpub.com/virtualization-and-cloud/openstack-bootcamp?utm_source=github&utm_medium=repository&utm_content=9781788396110)
 
-* [MQTT Essentials - A Lightweight IoT Protocol](https://www.packtpub.com/application-development/mqtt-essentials-lightweight-iot-protocol?utm_source=github&utm_medium=repository&utm_content=9781787287815)
+* [OpenStack Cloud Computing Cookbook - Fourth Edition](https://www.packtpub.com/virtualization-and-cloud/openstack-cloud-computing-cookbook-fourth-edition?utm_source=github&utm_medium=repository&utm_content=9781788396110)
 
-* [IoT Penetration Testing Cookbook](https://www.packtpub.com/networking-and-servers/iot-penetration-testing-cookbook?utm_source=github&utm_medium=repository&utm_content=9781787280571)
+* [OpenStack: Building a Cloud Environment](https://www.packtpub.com/virtualization-and-cloud/openstack-building-cloud-environment?utm_source=github&utm_medium=repository&utm_content=9781788396110)
