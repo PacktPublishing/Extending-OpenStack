@@ -1,0 +1,12 @@
+Format: 1.3
+Type: Application
+FullName: com.example.apache.packtpub.WebServer
+Version: 1.0.0
+Name: PacktPub_WebServer
+Description: |
+ A custom Httpd Server with accelerated caching capabilities for the PacktPub domain name   
+Author: 'PacktPub Cloud Application Publisher'
+Tags: [Apache, WebSite, HTTP, WebServer, PacktPub, Publisher]
+Classes:
+ com.example.apache.packtpub.WebServer: HttpWebSite.yaml
+

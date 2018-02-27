@@ -1,0 +1,35 @@
+{
+  "ScenarioPlugin.create_and_delete_magnum_clusters": [
+    {
+      "runner": {
+        "type": "constant",
+        "concurrency": 4,
+        "times": 50
+      },
+      "args": {
+        "node_count": 2,
+        "force_delete": "True"
+      },
+      "context": {
+        "cluster_templates": {
+          "dns_nameserver": "8.8.8.8",
+          "external_network_id": "public",
+          "flavor_id": "m1.small",
+          "docker_volume_size": 5,
+          "coe": "kubernetes",
+          "image_id": "fedora-latest",
+          "network_driver": "flannel"
+        },
+        "users": {
+          "users_per_tenant": 5,
+          "tenants": 5
+        }
+      },
+      "sla": {
+        "failure_rate": {
+          "max": 0
+        }
+      }
+    }
+  ]
+}

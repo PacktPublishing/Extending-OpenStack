@@ -1,0 +1,66 @@
+Namespaces:
+  =: com.example.apache.packtpub
+  std: io.murano
+  res: io.murano.resources
+  sys: io.murano.system
+  conf: io.murano.configuration
+
+
+Name: WebServer
+
+Extends: std:Application
+
+Properties:
+
+  enablePHP:
+    Contract: $.bool()
+    Default: false
+
+  instance:
+    Contract: $.class(res:Instance).notNull()
+
+Methods:
+  .init:
+    Body:
+      - $._environment: $.find(std:Environment).require()
+
+  deploy:
+    Body:
+      - If: not $.getAttr(deployed, false)
+        Then:
+          - $._environment.reporter.report($this, 'Creating VM for Apache Server.')
+          - $securityGroupIngress:
+            - ToPort: 80
+              FromPort: 80
+              IpProtocol: tcp
+              External: true
+            - ToPort: 443
+              FromPort: 443
+              IpProtocol: tcp
+              External: true
+           - ToPort: 22
+              FromPort: 22
+              IpProtocol: tcp
+              External: false
+          - $._environment.securityGroupManager.addGroupIngress($securityGroupIngress)
+          - $.instance.deploy()
+
+          - $._environment.reporter.report($this, 'Instance is created. Deploying Httpd.')
+
+          - $file: sys:Resources.string('deployHttpd.sh')
+          - conf:Linux.runCommand($.instance.agent, $file)
+
+          - If: $.enablePHP
+            Then:
+              - $._environment.reporter.report($this, 'Installing PHP.')
+              - conf:Linux.runCommand($.instance.agent, "sudo yum install -y php5")
+
+          - $._environment.reporter.report($this, 'HttpD is installed.')
+          - If: $.instance.assignFloatingIp
+            Then:
+              - $host: $.instance.floatingIpAddress
+            Else:
+              - $host: $.instance.ipAddresses.first()
+
+          - $._environment.reporter.report($this, format('Apache is available at http://{0}', $host))
+          - $.setAttr(deployed, true)

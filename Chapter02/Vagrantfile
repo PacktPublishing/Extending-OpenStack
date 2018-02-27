@@ -1,0 +1,64 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+# Ansible Deployment Host
+config.vm.define :adh do |adh|
+  adh.vm.hostname= "adh"
+  adh.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "1024"]
+          vb.customize ["modifyvm", :id, "--cpus", "2"]
+		 vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+# Cloud Controller Host
+config.vm.define :cc do |cc|
+  cc.vm.hostname= "cc"
+  cc.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "3072"]
+          vb.customize ["modifyvm", :id, "--cpus", "3"]
+             vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+# Compute Node
+config.vm.define :cn do |cn|
+  cn.vm.hostname= "cn"
+  cn.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "4096"]
+          vb.customize ["modifyvm", :id, "--cpus", "4"]
+             vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+# Compute Node
+config.vm.define :cn02 do |cn02|
+  cn02.vm.hostname= "cn02"
+  cn02.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "4096"]
+          vb.customize ["modifyvm", :id, "--cpus", "4"]
+             vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+# Compute Node Docker
+config.vm.define :cn03 do |cn03|
+  cn03.vm.hostname= "cn03"
+  cn03.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "4096"]
+          vb.customize ["modifyvm", :id, "--cpus", "4"]
+             vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+# Compute Node XenServer
+config.vm.define :cn04 do |cn04|
+  cn04.vm.hostname= "cn04"
+  cn04.vm.provider "virtualbox" do |vb|
+          vb.customize ["modifyvm", :id, "--memory", "4096"]
+          vb.customize ["modifyvm", :id, "--cpus", "4"]
+             vb.customize ["modifyvm", :id, "--nicpromic2", "allow-all"]
+      end
+end
+
+end

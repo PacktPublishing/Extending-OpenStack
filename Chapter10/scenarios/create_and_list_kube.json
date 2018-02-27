@@ -1,0 +1,34 @@
+{
+      "MagnumClusters.create_and_list_clusters": [
+        {
+          "runner": {
+            "type": "constant",
+            "concurrency": 1,
+            "times": 1
+          },
+          "args": {
+            "node_count": 1
+          },
+          "context": {
+            "cluster_templates": {
+              "dns_nameserver": "8.8.8.8",
+              "external_network_id": "external_network",
+              "flavor_id": "m1.small",
+              "docker_volume_size": 5,
+              "coe": "kubernetes",
+              "image_id": "fedora_atomic",
+              "network_driver": "flannel"
+            },
+            "users": {
+              "users_per_tenant": 1,
+              "tenants": 1
+            }
+          },
+          "sla": {
+            "failure_rate": {
+              "max": 0
+            }
+          }
+        }
+      ]
+    }
