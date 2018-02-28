@@ -1,5 +1,5 @@
 # Extending OpenStack
-This is the code repository for [Extending OpenStack](https://www.packtpub.com/virtualization-and-cloud/extending-openstack?utm_source=github&utm_medium=repository&utm_content=9781788396110), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Extending OpenStack](https://www.packtpub.com/virtualization-and-cloud/extending-openstack?utm_source=github&utm_medium=repository&utm_content=9781786465535), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 OpenStack is a very popular cloud computing platform that has enabled several organizations to successfully implement their Infrastructure as a Service (IaaS) platforms in the last few years. This book will guide you through new features of the latest OpenStack releases and how to bring them into production straight away in an agile way. It starts by showing you how to expand your current OpenStack setup and approach your next OpenStack Data Center generation deployment. You will discover how to extend your storage and network capacity, and also take advantage of containerization technology, such as Docker and Kubernetes in OpenStack. In addition, it is an opportunity to explore the power of big data as a service implemented in OpenStack by integrating the Sahara project. 
 
@@ -33,8 +33,8 @@ The lab environment uses the following software and tools:
 
 
 ## Related Products
-* [OpenStack Bootcamp](https://www.packtpub.com/virtualization-and-cloud/openstack-bootcamp?utm_source=github&utm_medium=repository&utm_content=9781788396110)
+* [OpenStack Bootcamp](https://www.packtpub.com/virtualization-and-cloud/openstack-bootcamp?utm_source=github&utm_medium=repository&utm_content=9781788293303)
 
-* [OpenStack Cloud Computing Cookbook - Fourth Edition](https://www.packtpub.com/virtualization-and-cloud/openstack-cloud-computing-cookbook-fourth-edition?utm_source=github&utm_medium=repository&utm_content=9781788396110)
+* [OpenStack Cloud Computing Cookbook - Fourth Edition](https://www.packtpub.com/virtualization-and-cloud/openstack-cloud-computing-cookbook-fourth-edition?utm_source=github&utm_medium=repository&utm_content=9781788398763)
 
-* [OpenStack: Building a Cloud Environment](https://www.packtpub.com/virtualization-and-cloud/openstack-building-cloud-environment?utm_source=github&utm_medium=repository&utm_content=9781788396110)
+* [OpenStack: Building a Cloud Environment](https://www.packtpub.com/virtualization-and-cloud/openstack-building-cloud-environment?utm_source=github&utm_medium=repository&utm_content=9781787123182)
