@@ -38,3 +38,7 @@ The lab environment uses the following software and tools:
 * [OpenStack Cloud Computing Cookbook - Fourth Edition](https://www.packtpub.com/virtualization-and-cloud/openstack-cloud-computing-cookbook-fourth-edition?utm_source=github&utm_medium=repository&utm_content=9781788398763)
 
 * [OpenStack: Building a Cloud Environment](https://www.packtpub.com/virtualization-and-cloud/openstack-building-cloud-environment?utm_source=github&utm_medium=repository&utm_content=9781787123182)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to download a free PDF copy of this book.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781786465535">https://packt.link/free-ebook/9781786465535 </a> </p>
